@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mlx-halo"
+version = "0.1.0"
+description = "Pre-flight safety checks for MLX models on Apple Silicon. Prevents kernel panics from overlapping Metal GPU allocations."
+license = "Liberation-1.0"
+requires-python = ">=3.10"
+authors = [
+    { name = "Alyssa Powell" },
+]
+keywords = ["mlx", "apple-silicon", "gpu", "safety", "kernel-panic", "metal"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: System :: Hardware",
+]
+dependencies = [
+    "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+mlx = ["mlx>=0.10"]
+
+[project.urls]
+Homepage = "https://github.com/alyssapowell/mlx-halo"
+Issues = "https://github.com/alyssapowell/mlx-halo/issues"
