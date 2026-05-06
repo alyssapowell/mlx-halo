@@ -264,3 +264,7 @@ echo "$USER ALL=(ALL) NOPASSWD: /usr/bin/powermetrics" | sudo tee /etc/sudoers.d
 ## License
 
 [Liberation License v1.0](LICENSE.md)
+
+---
+
+*The Halo device was introduced to Formula 1 in 2018. It has since prevented multiple fatal injuries. It exists because safety systems that feel unnecessary are the ones that matter most.*
