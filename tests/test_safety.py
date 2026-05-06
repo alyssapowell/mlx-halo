@@ -4,7 +4,16 @@ import pytest
 from mlx_halo.safety import HaloCheck, preflight
 from mlx_halo.types import HaloResult
 
+try:
+    import mlx.core  # noqa: F401
+    HAS_MLX = True
+except ImportError:
+    HAS_MLX = False
 
+requires_mlx = pytest.mark.skipif(not HAS_MLX, reason="MLX not available (Apple Silicon only)")
+
+
+@requires_mlx
 class TestHaloCheck:
     def test_conflict_check_blocks(self):
         """Conflict check should raise MemoryError when conflict detected."""
@@ -97,6 +106,7 @@ class TestHaloCheck:
             pytest.skip("System state prevented all checks from passing")
 
 
+@requires_mlx
 class TestPreflight:
     def test_preflight_convenience(self):
         """preflight() should work as a one-call check."""
