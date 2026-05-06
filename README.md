@@ -17,14 +17,16 @@ mlx-halo catches these conditions before they crash your system.
 
 ## Install
 
+From GitHub:
+
 ```bash
-pip install mlx-halo
+pip install git+https://github.com/alyssapowell/mlx-halo.git
 ```
 
-MLX is an optional dependency (for GPU memory checks):
+With MLX support (for GPU memory checks):
 
 ```bash
-pip install "mlx-halo[mlx]"
+pip install "mlx-halo[mlx] @ git+https://github.com/alyssapowell/mlx-halo.git"
 ```
 
 ## Quick Start
