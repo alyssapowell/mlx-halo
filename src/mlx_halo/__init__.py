@@ -29,7 +29,7 @@ from .pain import PainCalculator, get_pain_calculator, get_current_pain
 from .memory import get_gpu_memory_status, clear_gpu_cache, wait_for_memory_drain
 from .types import SystemMetrics, PainProfile, HaloResult, HealthStatus, MemoryStatus
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 __all__ = [
     "preflight",

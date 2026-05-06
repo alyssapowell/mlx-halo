@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "mlx-halo"
-version = "0.1.0"
+version = "1.0.0"
 description = "Pre-flight safety checks for MLX models on Apple Silicon. Prevents kernel panics from overlapping Metal GPU allocations."
 license = {file = "LICENSE.md"}
 requires-python = ">=3.10"
