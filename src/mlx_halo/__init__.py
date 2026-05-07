@@ -35,16 +35,17 @@ import os as _os
 if "AGX_RELAX_CDM_CTXSTORE_TIMEOUT" not in _os.environ:
     _os.environ["AGX_RELAX_CDM_CTXSTORE_TIMEOUT"] = "1"
 
-from .safety import HaloCheck, preflight
+from .safety import HaloCheck, preflight, preflight_generation
 from .monitor import SystemMonitor, get_monitor
 from .pain import PainCalculator, get_pain_calculator, get_current_pain
 from .memory import get_gpu_memory_status, clear_gpu_cache, wait_for_memory_drain
 from .types import SystemMetrics, PainProfile, HaloResult, HealthStatus, MemoryStatus
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 __all__ = [
     "preflight",
+    "preflight_generation",
     "HaloCheck",
     "SystemMonitor",
     "get_monitor",
